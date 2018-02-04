@@ -1,0 +1,20 @@
+{
+    "name":"request-forwarding",
+    "description":"接口请求转发",
+    "version":"0.01",
+    "manifest_version":2,
+    "browser_action":{
+        "default_popup":"main.html",
+        "default_icon":"icon/logo.png"
+    },
+    "commands":{
+        "_execute_browser_action":{
+            "suggest_key":{
+                "default":"Ctrl+Shift+F",
+                "mac":"MacCtrl+Shift+F"
+            },
+            "description":"打开 Main.html"
+        }
+    }
+
+}
