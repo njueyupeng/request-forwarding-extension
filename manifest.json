@@ -3,9 +3,14 @@
     "description":"接口请求转发",
     "version":"0.01",
     "manifest_version":2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval' ; object-src 'self';",
     "browser_action":{
         "default_popup":"main.html",
-        "default_icon":"icon/logo.png"
+        "default_title": "请求转发",
+        "default_icon":"image/logo.png"
+    },
+    "background": {
+        "scripts": ["lib/fileSaver.js", "js/background.js"]
     },
     "commands":{
         "_execute_browser_action":{
@@ -15,6 +20,12 @@
             },
             "description":"打开 Main.html"
         }
-    }
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://ssmpsit.cnsuning.com/",
+        "*://dippre.cnsuning.com/*"
+    ]
 
 }
